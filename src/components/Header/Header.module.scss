@@ -1,0 +1,90 @@
+$breakpoint: 768px;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    @media (min-width: $breakpoint) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media (min-width: $breakpoint) {
+        // スクロール追従
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    // 横幅いっぱいに背景色を指定
+    background-color: #EDF3F7;
+    box-shadow: 0 0 0 100vmax #EDF3F7;
+    clip-path: inset(0 -100vmax);
+
+    z-index: 10;
+
+    .headerLogoContainer {
+        width: 100%;
+        margin-top: 0.5em;
+        @media (min-width: $breakpoint) {
+            margin-top: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #333333;
+        }
+        .headerLogo {
+            height: 40px;
+        }
+        .headerTitle {
+            position: relative;
+            bottom: 5px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0.5em;
+        @media (min-width: $breakpoint) {
+            margin-top: 15px;
+        }
+        input[type="text"] {
+            display: block;
+            box-sizing: border-box;
+            &::placeholder {
+                color: #BDBDBD;
+                font-size: 14px;
+            }
+            border: 1px solid #999999;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: 100%;
+            height: 2em;
+            font-size: 18px;
+            @media (min-width: $breakpoint) {
+                font-size: 16px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        input[type="submit"] {
+            cursor: pointer;
+            display: block;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            width: 2em;
+            margin: 0.5em;
+            background-image: url("/search.svg");
+            background-repeat: no-repeat;
+        }
+    }
+}

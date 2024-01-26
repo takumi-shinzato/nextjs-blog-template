@@ -1,0 +1,26 @@
+body {
+  font-family: "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  // color: #33475B;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.7em;
+  text-align: justify;
+  a {
+    color: #333333;
+  }
+}
+
+p:has(.callout_red), p:has(.callout_blue) {
+  margin: 2em 0;
+  padding: 0.8em;
+}
+p:has(.callout_red) {
+  background-color: #FDEDEE;
+  border-left: 5px solid #F7AAAD;
+}
+p:has(.callout_blue) {
+  background-color: #E5F5F8;
+  border-left: 5px solid #7FD1DE;
+}

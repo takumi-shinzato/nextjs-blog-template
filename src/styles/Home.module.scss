@@ -1,0 +1,37 @@
+.gridArea {
+    min-height: 100vh;
+    display: grid;
+    // スマートフォン用レイアウト
+    grid-template:
+        "... header ..." 120px
+        "... ...... ..." 40px
+        "... main   ..." auto
+        "... ...... ..." 40px
+        "... aside  ..." auto
+        "... ...... ..." 30px
+        "... footer ..." 40px
+        / 20px auto 20px;
+    @media screen and (min-width: 768px) {
+        // デスクトップ用レイアウト
+        grid-template:
+            "... header header header ..." 70px
+            "... ...... ...... ...... ..." 50px
+            "... aside  ...... main   ..." auto
+            "... ...... ...... ...... ..." 60px
+            "... footer footer footer ..." 40px
+            / minmax(20px, auto) 180px 50px minmax(auto, 650px) minmax(20px, auto);
+    }
+    
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: main;
+    }
+    aside {
+        grid-area: aside;
+    }
+    footer {
+        grid-area: footer;
+    }
+}

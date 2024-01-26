@@ -20,7 +20,7 @@ yarn dev
 API_KEY=xxxxxxxxxx
 ```
 
-## MicroCMS側の準備
+## microCMS側の準備
 下記のようなAPIをMicroCMSで作成
 
 **endpoint : article**
